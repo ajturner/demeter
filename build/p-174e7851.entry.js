@@ -1,0 +1,12 @@
+import{r as t,h as e,H as n}from"./p-7c78c4f2.js";
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-components/blob/master/LICENSE.md for details.
+ * v1.2.0
+ */const o="calcite-mode-auto";const i="calcite-mode-dark";
+/*!
+ * All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+ * See https://github.com/Esri/calcite-components/blob/master/LICENSE.md for details.
+ * v1.2.0
+ */function a(){const{classList:t}=document.body;const e=window.matchMedia("(prefers-color-scheme: dark)").matches;const n=()=>t.contains(i)||t.contains(o)&&e?"dark":"light";const a=t=>document.body.dispatchEvent(new CustomEvent("calciteModeChange",{bubbles:true,detail:{mode:t}}));const r=t=>{c!==t&&a(t);c=t};let c=n();a(c);window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",(t=>r(t.matches?"dark":"light")));new MutationObserver((()=>r(n()))).observe(document.body,{attributes:true,attributeFilter:["class"]})}function r(){const t=typeof window!=="undefined"&&typeof location!=="undefined"&&typeof document!=="undefined"&&window.location===location&&window.document===document;if(t){if(document.readyState==="interactive"){a()}else{document.addEventListener("DOMContentLoaded",(()=>a()),{once:true})}}}const c=r;c();const s=":host{display:block}.container{max-width:80vw;display:flex;align-items:center;justify-content:center}";const d=class{constructor(e){t(this,e);this.featureId=undefined;this.datasetUrl=undefined}componentWillLoad(){console.log("Feature ID",this.featureId)}render(){return e(n,null,e("slot",null),"Hello from Demeter!",e("div",{class:"container"},e("demeter-metadata",{featureId:this.featureId,featureLayerUrl:this.datasetUrl,fields:[{name:"Location",attribute:"VICINITY",type:"string"},{name:"Scientific Name",attribute:"SCI_NM",type:"string"},{name:"Common Name",attribute:"CMMN_NM",type:"string"},{name:"Diameter (at breast height)",attribute:"DBH",type:"string"},{name:"Condition",attribute:"CONDITION",type:"string"},{name:"Last Checkup",attribute:"CONDITIODT",type:"date"},{name:"Date Planted",attribute:"DATE_PLANT",type:"date"}]})))}};d.style=s;export{d as demeter_app};
+//# sourceMappingURL=p-174e7851.entry.js.map
