@@ -6,19 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface DemeterApp {
+    }
 }
 declare global {
+    interface HTMLDemeterAppElement extends Components.DemeterApp, HTMLStencilElement {
+    }
+    var HTMLDemeterAppElement: {
+        prototype: HTMLDemeterAppElement;
+        new (): HTMLDemeterAppElement;
+    };
     interface HTMLElementTagNameMap {
+        "demeter-app": HTMLDemeterAppElement;
     }
 }
 declare namespace LocalJSX {
+    interface DemeterApp {
+    }
     interface IntrinsicElements {
+        "demeter-app": DemeterApp;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "demeter-app": LocalJSX.DemeterApp & JSXBase.HTMLAttributes<HTMLDemeterAppElement>;
         }
     }
 }
