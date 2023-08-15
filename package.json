@@ -1,7 +1,7 @@
 {
   "name": "demeter",
   "version": "0.0.1",
-  "description": "Template for creating prototypes with stencil",
+  "description": "Prototype app for access nature data",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -32,6 +32,12 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@esri/arcgis-rest-auth": "^2.25.0",
+    "@esri/arcgis-rest-feature-layer": "^3.6.0",
+    "@esri/arcgis-rest-portal": "^4.3.0",
+    "@esri/arcgis-rest-request": "^4.2.0",
+    "@esri/hub-common": "^13.12.0",
+    "@esri/hub-discussions": "^24.0.0",
     "@stencil/core": "^2.13.0",
     "@types/node": "^18.14.0"
   },

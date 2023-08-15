@@ -40,6 +40,10 @@
     // componentEl.query = urlParams.get('query');
     // componentEl.innerHTML = "Slot text";
     
+      
+    componentEl.featureId = urlParams.get('featureId') || "33838693";
+    componentEl.datasetUrl = "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Environment_WebMercator/MapServer/23";
+    
     placeholderEl.appendChild(componentEl);
   </script>
 </body>
