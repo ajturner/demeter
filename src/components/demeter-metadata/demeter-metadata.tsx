@@ -124,7 +124,7 @@ export class DemeterMetadata {
 
 
   viewFeature(featureId: string) {
-    open(`/?featureId=${featureId}`, '_top')
+    open(`./?featureId=${featureId}`, '_top')
   }
   private renderMetadata(feature: any) {
     return <calcite-card
